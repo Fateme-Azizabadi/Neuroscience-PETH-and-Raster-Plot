@@ -23,6 +23,7 @@ Next, the Raster Plot is drawn for 100 tests and the first 20 tests.
 A quick look shows that there is no unique and well-defined concept of "Mean Firing rate". In fact, there are at least three different concepts of rate that are often confused and used simultaneously. These three definitions refer to three different averaging methods: averaging over time, averaging over multiple trial repetitions, averaging over a population of neurons. The following three subsections will revisit these three concepts in detail.
 
 * **Rate as a Spike Count**
+
 The first and most common definition of Firing Rate refers to the time average. Firing rate in experiment k is equal to the number of spikes n_k^sp in a period of time T divided by T. That is, we consider a time window T and count the number of spikes.
 The length of T is the time window determined by the experimenter and depends on the type of neuron and the stimulus. In practice, multiple spikes must occur in the time window to obtain reasonable averages. Typical values ​​are T=100 ms or T=500 ms, but the duration may be longer or shorter.
 If the same experiment is repeated several times, the number of spikes measured will vary between one experiment and the next. Therefore, we consider their average.
@@ -34,9 +35,11 @@ The number of spikes n_K (t; t+Δt) collected in all experiment repetitions divi
 As an experimental method, PSTH measurement is valuable for assessing neural activity, especially for time-dependent stimuli.
 
 * **Rate as a Population Activity (Average over Several Neurons)**
+
 The number of neurons in the brain is very large. Often many neurons have similar properties and respond to the same stimuli. Therefore, sometimes to get the firing rate, they average the spikes of a set of neurons.
 
 **Why do they use windowing to estimate the histogram?**
+
 The windows determine how many spikes we have in a time interval T, so it is determined when the spike occurred more and when there was less activity. Therefore, the Firing Rate check is much faster and more readable. In fact, the histogram divides the data into classes, here our data are spikes, and the classes are actually time intervals of window length.
 
  ![](https://github.com/Fateme-Azizabadi/Neuroscience-PETH-and-Raster-Plot/blob/main/Images/PETH.png)
